@@ -1,25 +1,23 @@
 import { RecoilRoot } from 'recoil';
-import ProductList from './components/ProductList';
-import Cart from './components/Cart';
+import Toast from './components/Toast';
+import ActionButtons from './components/ActionButtons';
 
 function App() {
   return (
     <RecoilRoot>
-      <div className='min-h-screen bg-white flex flex-col items-center p-8'>
-        <div className='w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-10'>
-          <div>
-            <h2 className='text-2xl font-black text-slate-800 mb-6 uppercase'>
-              Cửa hàng công nghệ
-            </h2>
-            <ProductList />
-          </div>
-          <div>
-            <Cart />
+      <div className='min-h-screen bg-slate-50 flex items-center justify-center'>
+        <Toast />
+
+        <div className='text-center space-y-8'>
+          <h1 className='text-3xl font-black text-slate-800'>NOTIFY SYSTEM</h1>
+          <p className='text-slate-500'>
+            Thử bấm các nút dưới đây để thấy Toast xuất hiện
+          </p>
+
+          <div className='flex justify-center'>
+            <ActionButtons />
           </div>
         </div>
-        <footer className='mt-20 text-slate-300 font-medium'>
-          Nguyen Tan Tai - 23701841
-        </footer>
       </div>
     </RecoilRoot>
   );
